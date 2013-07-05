@@ -4,6 +4,15 @@ public class BankAccountDTO {
 
 	private String accountNumber;
 	private double balance;
+	private Long timestamp;
+
+	public Long getTimestamp() {
+		return this.timestamp;
+	}
+
+	public void setTimestamp(long timestamp) {
+		this.timestamp = timestamp;
+	}
 
 	public BankAccountDTO(String accountNumber2) {
 		this.accountNumber = accountNumber2;

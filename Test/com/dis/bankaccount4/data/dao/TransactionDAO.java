@@ -9,4 +9,20 @@ public class TransactionDAO {
 		
 	}
 
+	public void getTransactionOccurred(String capture) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void getTransactionsInPeriodOfTime(String accountNumber,
+			long startTime, long stopTime) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void getTheLastNTransactions(String accountNumber, int n) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
