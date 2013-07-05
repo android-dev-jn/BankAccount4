@@ -19,7 +19,9 @@ public class BankAccount {
 
 	public static void deposit(String accountNumber, double amount,
 			String description) {
-		
+		BankAccountDTO bankAccountDTO = new BankAccountDTO(accountNumber, amount);
+		bankAccountDTO.setBalance(bankAccountDTO.getBalance() + amount);
+		bankAccountDAO.save(bankAccountDTO);
 	}
 
 }
