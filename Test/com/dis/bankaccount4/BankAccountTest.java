@@ -13,19 +13,24 @@ import org.mockito.MockitoAnnotations;
 
 import com.dis.bankaccount4.business.service.BankAccount;
 import com.dis.bankaccount4.data.dao.BankAcountDAO;
+import com.dis.bankaccount4.data.dao.TransactionDAO;
 import com.dis.bankaccount4.data.entity.BankAccountDTO;
+import com.dis.bankaccount4.data.entity.TransactionDTO;
 
 public class BankAccountTest extends TestCase {
 
 	private String accountNumber = "1234567890";
 	private BankAcountDAO mockBankAccountDAO = mock(BankAcountDAO.class);
+	private TransactionDAO mockTransactionDAO = mock(TransactionDAO.class);
 	private Calendar mockCalendar = mock(Calendar.class);
 
 	public void setUp() {
 		MockitoAnnotations.initMocks(this);
 		reset(mockBankAccountDAO);
 		reset(mockCalendar);
+		reset(mockTransactionDAO);
 		BankAccount.bankAccountDAO = this.mockBankAccountDAO;
+		BankAccount.transactionDAO = this.mockTransactionDAO;
 		BankAccount.calendar = this.mockCalendar;
 	}
 
